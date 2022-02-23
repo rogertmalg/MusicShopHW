@@ -2,6 +2,7 @@ import behaviours.ISell;
 
 import java.util.ArrayList;
 import java.util.OptionalDouble;
+import java.util.OptionalInt;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -27,7 +28,11 @@ public class Shop {
        IntStream markups = stock.stream().map(item -> item.calculateMarkup()).mapToInt(item -> item);
        OptionalDouble averageMarkup = markups.average();
        return averageMarkup.getAsDouble();
+    }
 
-
+    public double findHighestMarkup() {
+        IntStream markups = stock.stream().map(item -> item.calculateMarkup()).mapToInt(item -> item);
+        OptionalInt highestMarkup = markups.max();
+        return highestMarkup.getAsInt();
     }
 }

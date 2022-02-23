@@ -46,4 +46,9 @@ public class ShopTest {
         assertEquals(25.5, shop.totalAverageMarkup(), 0.0);
     }
 
+    @Test
+    public void canGetHighestMarkup() {
+        assertEquals(30, shop.findHighestMarkup(), 0.0);
+    }
+
 }

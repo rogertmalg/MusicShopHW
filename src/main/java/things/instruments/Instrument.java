@@ -9,7 +9,8 @@ public abstract class Instrument extends Item implements IPlay {
     private String colour;
     private InstrumentType type;
 
-    public Instrument(String itemName, double buyPrice, double sellPrice, String material, String colour, InstrumentType type) {
+    public Instrument(String itemName, double buyPrice, double sellPrice,
+                      String material, String colour, InstrumentType type) {
         super(itemName, buyPrice, sellPrice);
         this.material = material;
         this.colour = colour;

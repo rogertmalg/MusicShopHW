@@ -1,6 +1,6 @@
 package things.instruments;
 
-public class Flute extends Instrument{
+public class Flute extends Instrument {
     private String fluteType;
 
     public Flute(String itemName, double buyPrice, double sellPrice,
